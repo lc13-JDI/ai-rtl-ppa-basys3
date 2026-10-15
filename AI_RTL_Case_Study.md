@@ -45,6 +45,6 @@ AI 替换版顶层 LUT 增加约 40.6%，FF 变化较小，时序却显著恶化
 
 本案例将接口、约束、候选 RTL、测试用例和工具报告组织成可追溯评测单元。仓库复用原 Tcl 综合流程，新增 Python 报告提取与仿真日志检查入口，将“可综合”“有限用例通过”“满足目标时序”分别记录。后续接入模型或 Agent 时，可先做功能检查，再比较同阶段资源与时序，并把失败路径反馈给模型；本项目尚未开展微调、强化学习或效率收益测量。
 
-GitHub：**待公开发布确认后填入真实仓库链接；当前尚未发布。**
+GitHub：[lc13-JDI/ai-rtl-ppa-basys3](https://github.com/lc13-JDI/ai-rtl-ppa-basys3)
 
 Bilibili：[ASIC 课程项目演示](https://www.bilibili.com/video/BV1vc7k6WEDN/)
