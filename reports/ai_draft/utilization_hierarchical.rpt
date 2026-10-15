@@ -1,0 +1,39 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Jun  5 11:06:13 2026
+| Host         : [redacted for publication]
+| Command      : report_utilization -hierarchical -file [original-root]/vivado_ai_compare_reports/ai_draft/utilization_hierarchical.rpt
+| Design       : reaction_top
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------+---------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|      Instance      |        Module       | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------+---------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| reaction_top       |               (top) |       2089 |       2089 |       0 |    0 | 322 |      0 |      0 |          3 |
+|   (reaction_top)   |               (top) |          1 |          1 |       0 |    0 |  16 |      0 |      0 |          0 |
+|   u_buzzer_player  |       buzzer_player |        369 |        369 |       0 |    0 |  52 |      0 |      0 |          0 |
+|   u_debounce_react |   debounce_onepulse |         12 |         12 |       0 |    0 |  12 |      0 |      0 |          0 |
+|   u_debounce_start | debounce_onepulse_0 |         12 |         12 |       0 |    0 |  12 |      0 |      0 |          0 |
+|   u_led_effect     |          led_effect |         33 |         33 |       0 |    0 |  40 |      0 |      0 |          0 |
+|   u_lfsr_random    |         lfsr_random |        409 |        409 |       0 |    0 |  32 |      0 |      0 |          3 |
+|   u_reaction_fsm   |        reaction_fsm |        330 |        330 |       0 |    0 |  73 |      0 |      0 |          0 |
+|   u_score_history  |       score_history |        380 |        380 |       0 |    0 |  41 |      0 |      0 |          0 |
+|   u_seg7_scan      |           seg7_scan |          4 |          4 |       0 |    0 |   2 |      0 |      0 |          0 |
+|   u_tick_1ms       |            tick_1ms |          6 |          6 |       0 |    0 |  18 |      0 |      0 |          0 |
+|   u_vga_timing     |          vga_timing |        533 |        533 |       0 |    0 |  24 |      0 |      0 |          0 |
++--------------------+---------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

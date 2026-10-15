@@ -1,0 +1,209 @@
+[
+  {
+    "source": "rtl/buzzer_player.v",
+    "published": "rtl/buzzer_player.v",
+    "original_sha256": "1b9f7a0ba1a39a1f623359ae6f3a911c28d5651ef2612bcb831835e2a8087948",
+    "published_sha256": "1b9f7a0ba1a39a1f623359ae6f3a911c28d5651ef2612bcb831835e2a8087948",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/debounce_onepulse.v",
+    "published": "rtl/debounce_onepulse.v",
+    "original_sha256": "2418bcc303b3282779894a1f67478d6251265ece37bc7fd60012acb6b68e00ed",
+    "published_sha256": "2418bcc303b3282779894a1f67478d6251265ece37bc7fd60012acb6b68e00ed",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/led_effect.v",
+    "published": "rtl/led_effect.v",
+    "original_sha256": "b7c7ba159b8c8e4a5f3eba4c90baa27eb860b6deb983f8f9ddafd5258737d2ff",
+    "published_sha256": "b7c7ba159b8c8e4a5f3eba4c90baa27eb860b6deb983f8f9ddafd5258737d2ff",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/lfsr_random.v",
+    "published": "rtl/lfsr_random.v",
+    "original_sha256": "2f542f1200b5de956b03b856c73b4a6005c735d73d1f53f3c41119c66c6a891f",
+    "published_sha256": "2f542f1200b5de956b03b856c73b4a6005c735d73d1f53f3c41119c66c6a891f",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/reaction_fsm.v",
+    "published": "rtl/reaction_fsm.v",
+    "original_sha256": "60780ccc969cfccccf4be357e9826e6034dc5fcc62bb7f6887fd483c4fbbdb86",
+    "published_sha256": "60780ccc969cfccccf4be357e9826e6034dc5fcc62bb7f6887fd483c4fbbdb86",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/reaction_top.v",
+    "published": "rtl/reaction_top.v",
+    "original_sha256": "191c92a9c881363a9a65231715a1bfe4e08f8c3751b60e690d1977509126eec6",
+    "published_sha256": "191c92a9c881363a9a65231715a1bfe4e08f8c3751b60e690d1977509126eec6",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/score_history.v",
+    "published": "rtl/score_history.v",
+    "original_sha256": "89d215096c5e85547f689f7099afb116de30310be5a1535662262304df3419ce",
+    "published_sha256": "89d215096c5e85547f689f7099afb116de30310be5a1535662262304df3419ce",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/seg7_scan.v",
+    "published": "rtl/seg7_scan.v",
+    "original_sha256": "5ea87fca89c068ce93efc297f727abc6a6fd5e6010ae7f91b9f0ca689b1e96bf",
+    "published_sha256": "5ea87fca89c068ce93efc297f727abc6a6fd5e6010ae7f91b9f0ca689b1e96bf",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/tick_1ms.v",
+    "published": "rtl/tick_1ms.v",
+    "original_sha256": "496a436f3fb442d11fbef85252a43721756ef45ff3717da996db1ac07256c019",
+    "published_sha256": "496a436f3fb442d11fbef85252a43721756ef45ff3717da996db1ac07256c019",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/vga_renderer.v",
+    "published": "rtl/vga_renderer.v",
+    "original_sha256": "9d238c01389344f319c54fefcb30e181867174c4624f8a9da054833e9eba4578",
+    "published_sha256": "9d238c01389344f319c54fefcb30e181867174c4624f8a9da054833e9eba4578",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "rtl/vga_timing.v",
+    "published": "rtl/vga_timing.v",
+    "original_sha256": "39330629310c7e886690618fa64c9ea267d80b06065ad05d26d4c19b0f84b1d5",
+    "published_sha256": "39330629310c7e886690618fa64c9ea267d80b06065ad05d26d4c19b0f84b1d5",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "sim/tb_buzzer_player.v",
+    "published": "sim/tb_buzzer_player.v",
+    "original_sha256": "c0a5d1d8c5a23f97ceae38bb7e06a1565ba7870d8f218e9c04ef3fa8a16881c2",
+    "published_sha256": "c0a5d1d8c5a23f97ceae38bb7e06a1565ba7870d8f218e9c04ef3fa8a16881c2",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "sim/tb_reaction_fsm.v",
+    "published": "sim/tb_reaction_fsm.v",
+    "original_sha256": "abc936ee01c23281c506920d98ac673182017a822e09df46cc29b6438bab33da",
+    "published_sha256": "abc936ee01c23281c506920d98ac673182017a822e09df46cc29b6438bab33da",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "sim/tb_vga_renderer.v",
+    "published": "sim/tb_vga_renderer.v",
+    "original_sha256": "1df91c044b4b3b345c39920efc8d6597a6e4b5eccba1d16765fd4add7bff472b",
+    "published_sha256": "1df91c044b4b3b345c39920efc8d6597a6e4b5eccba1d16765fd4add7bff472b",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "sim/tb_vga_timing.v",
+    "published": "sim/tb_vga_timing.v",
+    "original_sha256": "9f1cb84e0853113e56f6dacc8e64729747c3c6a39658a75c28cf266b5d6dfa39",
+    "published_sha256": "9f1cb84e0853113e56f6dacc8e64729747c3c6a39658a75c28cf266b5d6dfa39",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "ai_drafts/buzzer_player.v",
+    "published": "ai_drafts/buzzer_player.v",
+    "original_sha256": "b5bb28ff383f59256c985756eda6042f44f7cf115dc1a7b7dde6d83f2ced19ab",
+    "published_sha256": "b5bb28ff383f59256c985756eda6042f44f7cf115dc1a7b7dde6d83f2ced19ab",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "ai_drafts/lfsr_random.v",
+    "published": "ai_drafts/lfsr_random.v",
+    "original_sha256": "9ff0851803bf5d77788bf55d1a4df05fd1eda935bfb27c038342236dc4706b33",
+    "published_sha256": "9ff0851803bf5d77788bf55d1a4df05fd1eda935bfb27c038342236dc4706b33",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "ai_drafts/score_history.v",
+    "published": "ai_drafts/score_history.v",
+    "original_sha256": "8a63ebf78a794c35f8f03a967aeb768472d4d82bb7de98e160e2f53f7fc4eff6",
+    "published_sha256": "8a63ebf78a794c35f8f03a967aeb768472d4d82bb7de98e160e2f53f7fc4eff6",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "constraints/basys3_reaction.xdc",
+    "published": "constraints/basys3_reaction.xdc",
+    "original_sha256": "bcbc7b498734a8c49a7f9e3532133939b84b85e38e8109727cb85493b5802539",
+    "published_sha256": "bcbc7b498734a8c49a7f9e3532133939b84b85e38e8109727cb85493b5802539",
+    "transform": "byte-identical"
+  },
+  {
+    "source": "vivado_ai_compare_reports/ai_draft/setup_paths.rpt",
+    "published": "reports/ai_draft/setup_paths.rpt",
+    "original_sha256": "352d76ce9f524f6201fa58d7dfe8000cc3c20be62cbbb65fdd498b1692d5a462",
+    "published_sha256": "7088d74595b7a77ab65272759ada0ab0de76599a64733d94db3e0704bb22efb0",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/ai_draft/timing_summary.rpt",
+    "published": "reports/ai_draft/timing_summary.rpt",
+    "original_sha256": "f8782db608719168c0baa26b7d3fe7e68238839221e88188f30f6622c05fba2b",
+    "published_sha256": "7d73215e92120596ff19b361b805e658721582d7010b8190ac9f0f2cf1dc2b24",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/ai_draft/utilization.rpt",
+    "published": "reports/ai_draft/utilization.rpt",
+    "original_sha256": "ce0fa080b54e0ef837bfc476b7b950ba8b4e9bbc659fc7dc53fd15a27d0b0e30",
+    "published_sha256": "74be2466dbfd43cff3509e0733ccd13d7c19c9d3c5ef0df6839e2a59443619bf",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/ai_draft/utilization_hierarchical.rpt",
+    "published": "reports/ai_draft/utilization_hierarchical.rpt",
+    "original_sha256": "fc90b0d4aeb1e4288c811d4ac77dc64a82576623d95f78f147c541f1d4ded5ff",
+    "published_sha256": "96e968227300580f2c50cf15a86632c515c26cb85c53a55541727fdab5522bbb",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/baseline/setup_paths.rpt",
+    "published": "reports/baseline/setup_paths.rpt",
+    "original_sha256": "5e46148172ff33eeef71680c961d618cd0d05dc8339b11e3ac6e016ba4b7a1da",
+    "published_sha256": "f378a814c62c8b29b99b736d58a881eb8731c68fc83f96f3d1fd6156b15170b6",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/baseline/timing_summary.rpt",
+    "published": "reports/baseline/timing_summary.rpt",
+    "original_sha256": "43f5c9394dc88fcdaaf8d569b89c9c183e105b2cf9992e39a2346b2b3dfeec04",
+    "published_sha256": "077a965ff03ecfafbebfd6b534471dc008b5b277898f77652a9ef4ee0703b713",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/baseline/utilization.rpt",
+    "published": "reports/baseline/utilization.rpt",
+    "original_sha256": "2637c2c80d18823387e801592ed8085f1cb02721fc75a734f12075b8bc4fdde6",
+    "published_sha256": "d5c8a187a408a9f130244ae7d01483498e23dd3e94b75909eeacfcad424f9add",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "vivado_ai_compare_reports/baseline/utilization_hierarchical.rpt",
+    "published": "reports/baseline/utilization_hierarchical.rpt",
+    "original_sha256": "24eb3ea77f9333220b86b68119b488583d615a2b723b4fb082b3e976a8e2889c",
+    "published_sha256": "f394cf1bf0119b6a4dc41f4381d95e7646f78e3bd949668fd80892b73617ca15",
+    "transform": "normalize newlines; redact Host and absolute report output path only"
+  },
+  {
+    "source": "report.pdf",
+    "published": "assets/post_route_timing.png",
+    "original_sha256": "fab14d8615e63d0572541e8de9cb976793a5393ef1d82a60ab651c9e789a67c3",
+    "published_sha256": "67694e0ce882d035c3d30a4f32e51c225a81b22a361eb327349b1dd42d793589",
+    "transform": "extract embedded image without pixel editing",
+    "pdf_page": 20,
+    "figure": 19
+  },
+  {
+    "source": "report.pdf",
+    "published": "assets/board_result.jpg",
+    "original_sha256": "fab14d8615e63d0572541e8de9cb976793a5393ef1d82a60ab651c9e789a67c3",
+    "published_sha256": "5a9d2aa78bf80db1428dabfff399c0c44466599f268903978244fb42ea0ba52d",
+    "transform": "extract embedded image without pixel editing",
+    "pdf_page": 22,
+    "figure": 21
+  }
+]

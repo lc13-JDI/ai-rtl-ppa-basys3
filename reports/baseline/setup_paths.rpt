@@ -1,0 +1,387 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Jun  5 11:00:07 2026
+| Host         : [redacted for publication]
+| Command      : report_timing -max_paths 5 -sort_by slack -file [original-root]/vivado_ai_compare_reports/baseline/setup_paths.rpt
+| Design       : reaction_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 u_lfsr_random/lfsr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_reaction_fsm/wait_target_ms_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        9.780ns  (logic 6.139ns (62.768%)  route 3.641ns (37.232%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT1=1 LUT2=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.678ns = ( 12.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.938ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.258    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.354 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.584     2.938    u_lfsr_random/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_lfsr_random/lfsr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     3.394 r  u_lfsr_random/lfsr_reg[12]/Q
+                         net (fo=4, unplaced)         0.800     4.194    u_lfsr_random/lfsr_reg_n_0_[12]
+                         DSP48E1 (Prop_dsp48e1_A[12]_P[15])
+                                                      4.016     8.210 f  u_lfsr_random/scaled_wait/P[15]
+                         net (fo=2, unplaced)         0.800     9.010    u_lfsr_random/p_0_in[2]
+                         LUT1 (Prop_lut1_I0_O)        0.124     9.134 r  u_lfsr_random/wait_ms_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     9.134    u_lfsr_random/wait_ms_carry_i_2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.667 r  u_lfsr_random/wait_ms_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     9.676    u_lfsr_random/wait_ms_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    10.007 r  u_lfsr_random/wait_ms_carry__0/O[3]
+                         net (fo=3, unplaced)         0.636    10.643    u_lfsr_random/random_delay_ms[8]
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.950 f  u_lfsr_random/wait_target_ms[12]_i_5/O
+                         net (fo=1, unplaced)         0.449    11.399    u_lfsr_random/wait_target_ms[12]_i_5_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.523 f  u_lfsr_random/wait_target_ms[12]_i_4/O
+                         net (fo=1, unplaced)         0.449    11.972    u_lfsr_random/wait_target_ms[12]_i_4_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    12.096 f  u_lfsr_random/wait_target_ms[12]_i_3/O
+                         net (fo=13, unplaced)        0.499    12.595    u_lfsr_random/u_reaction_fsm/clipped_random_delay1__8
+                         LUT6 (Prop_lut6_I5_O)        0.124    12.719 r  u_lfsr_random/wait_target_ms[0]_i_1/O
+                         net (fo=1, unplaced)         0.000    12.719    u_reaction_fsm/D[0]
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    10.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    12.148    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    12.239 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.439    12.678    u_reaction_fsm/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[0]/C
+                         clock pessimism              0.115    12.793    
+                         clock uncertainty           -0.035    12.758    
+                         FDRE (Setup_fdre_C_D)        0.029    12.787    u_reaction_fsm/wait_target_ms_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.787    
+                         arrival time                         -12.719    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 u_lfsr_random/lfsr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_reaction_fsm/wait_target_ms_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        9.780ns  (logic 6.139ns (62.768%)  route 3.641ns (37.232%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT1=1 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.678ns = ( 12.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.938ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.258    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.354 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.584     2.938    u_lfsr_random/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_lfsr_random/lfsr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     3.394 r  u_lfsr_random/lfsr_reg[12]/Q
+                         net (fo=4, unplaced)         0.800     4.194    u_lfsr_random/lfsr_reg_n_0_[12]
+                         DSP48E1 (Prop_dsp48e1_A[12]_P[15])
+                                                      4.016     8.210 f  u_lfsr_random/scaled_wait/P[15]
+                         net (fo=2, unplaced)         0.800     9.010    u_lfsr_random/p_0_in[2]
+                         LUT1 (Prop_lut1_I0_O)        0.124     9.134 r  u_lfsr_random/wait_ms_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     9.134    u_lfsr_random/wait_ms_carry_i_2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.667 r  u_lfsr_random/wait_ms_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     9.676    u_lfsr_random/wait_ms_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    10.007 r  u_lfsr_random/wait_ms_carry__0/O[3]
+                         net (fo=3, unplaced)         0.636    10.643    u_lfsr_random/random_delay_ms[8]
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.950 f  u_lfsr_random/wait_target_ms[12]_i_5/O
+                         net (fo=1, unplaced)         0.449    11.399    u_lfsr_random/wait_target_ms[12]_i_5_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.523 f  u_lfsr_random/wait_target_ms[12]_i_4/O
+                         net (fo=1, unplaced)         0.449    11.972    u_lfsr_random/wait_target_ms[12]_i_4_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    12.096 f  u_lfsr_random/wait_target_ms[12]_i_3/O
+                         net (fo=13, unplaced)        0.499    12.595    u_lfsr_random/u_reaction_fsm/clipped_random_delay1__8
+                         LUT3 (Prop_lut3_I2_O)        0.124    12.719 r  u_lfsr_random/wait_target_ms[10]_i_1/O
+                         net (fo=1, unplaced)         0.000    12.719    u_reaction_fsm/D[10]
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    10.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    12.148    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    12.239 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.439    12.678    u_reaction_fsm/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[10]/C
+                         clock pessimism              0.115    12.793    
+                         clock uncertainty           -0.035    12.758    
+                         FDRE (Setup_fdre_C_D)        0.029    12.787    u_reaction_fsm/wait_target_ms_reg[10]
+  -------------------------------------------------------------------
+                         required time                         12.787    
+                         arrival time                         -12.719    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 u_lfsr_random/lfsr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_reaction_fsm/wait_target_ms_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        9.780ns  (logic 6.139ns (62.768%)  route 3.641ns (37.232%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT1=1 LUT2=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.678ns = ( 12.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.938ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.258    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.354 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.584     2.938    u_lfsr_random/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_lfsr_random/lfsr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     3.394 r  u_lfsr_random/lfsr_reg[12]/Q
+                         net (fo=4, unplaced)         0.800     4.194    u_lfsr_random/lfsr_reg_n_0_[12]
+                         DSP48E1 (Prop_dsp48e1_A[12]_P[15])
+                                                      4.016     8.210 f  u_lfsr_random/scaled_wait/P[15]
+                         net (fo=2, unplaced)         0.800     9.010    u_lfsr_random/p_0_in[2]
+                         LUT1 (Prop_lut1_I0_O)        0.124     9.134 r  u_lfsr_random/wait_ms_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     9.134    u_lfsr_random/wait_ms_carry_i_2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.667 r  u_lfsr_random/wait_ms_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     9.676    u_lfsr_random/wait_ms_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    10.007 r  u_lfsr_random/wait_ms_carry__0/O[3]
+                         net (fo=3, unplaced)         0.636    10.643    u_lfsr_random/random_delay_ms[8]
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.950 f  u_lfsr_random/wait_target_ms[12]_i_5/O
+                         net (fo=1, unplaced)         0.449    11.399    u_lfsr_random/wait_target_ms[12]_i_5_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.523 f  u_lfsr_random/wait_target_ms[12]_i_4/O
+                         net (fo=1, unplaced)         0.449    11.972    u_lfsr_random/wait_target_ms[12]_i_4_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    12.096 f  u_lfsr_random/wait_target_ms[12]_i_3/O
+                         net (fo=13, unplaced)        0.499    12.595    u_lfsr_random/u_reaction_fsm/clipped_random_delay1__8
+                         LUT2 (Prop_lut2_I1_O)        0.124    12.719 r  u_lfsr_random/wait_target_ms[12]_i_2/O
+                         net (fo=1, unplaced)         0.000    12.719    u_reaction_fsm/D[12]
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    10.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    12.148    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    12.239 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.439    12.678    u_reaction_fsm/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[12]/C
+                         clock pessimism              0.115    12.793    
+                         clock uncertainty           -0.035    12.758    
+                         FDRE (Setup_fdre_C_D)        0.029    12.787    u_reaction_fsm/wait_target_ms_reg[12]
+  -------------------------------------------------------------------
+                         required time                         12.787    
+                         arrival time                         -12.719    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 u_lfsr_random/lfsr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_reaction_fsm/wait_target_ms_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        9.780ns  (logic 6.139ns (62.768%)  route 3.641ns (37.232%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT1=1 LUT2=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.678ns = ( 12.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.938ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.258    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.354 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.584     2.938    u_lfsr_random/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_lfsr_random/lfsr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     3.394 r  u_lfsr_random/lfsr_reg[12]/Q
+                         net (fo=4, unplaced)         0.800     4.194    u_lfsr_random/lfsr_reg_n_0_[12]
+                         DSP48E1 (Prop_dsp48e1_A[12]_P[15])
+                                                      4.016     8.210 f  u_lfsr_random/scaled_wait/P[15]
+                         net (fo=2, unplaced)         0.800     9.010    u_lfsr_random/p_0_in[2]
+                         LUT1 (Prop_lut1_I0_O)        0.124     9.134 r  u_lfsr_random/wait_ms_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     9.134    u_lfsr_random/wait_ms_carry_i_2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.667 r  u_lfsr_random/wait_ms_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     9.676    u_lfsr_random/wait_ms_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    10.007 r  u_lfsr_random/wait_ms_carry__0/O[3]
+                         net (fo=3, unplaced)         0.636    10.643    u_lfsr_random/random_delay_ms[8]
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.950 f  u_lfsr_random/wait_target_ms[12]_i_5/O
+                         net (fo=1, unplaced)         0.449    11.399    u_lfsr_random/wait_target_ms[12]_i_5_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.523 f  u_lfsr_random/wait_target_ms[12]_i_4/O
+                         net (fo=1, unplaced)         0.449    11.972    u_lfsr_random/wait_target_ms[12]_i_4_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    12.096 f  u_lfsr_random/wait_target_ms[12]_i_3/O
+                         net (fo=13, unplaced)        0.499    12.595    u_lfsr_random/u_reaction_fsm/clipped_random_delay1__8
+                         LUT6 (Prop_lut6_I5_O)        0.124    12.719 r  u_lfsr_random/wait_target_ms[1]_i_1/O
+                         net (fo=1, unplaced)         0.000    12.719    u_reaction_fsm/D[1]
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    10.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    12.148    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    12.239 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.439    12.678    u_reaction_fsm/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_reaction_fsm/wait_target_ms_reg[1]/C
+                         clock pessimism              0.115    12.793    
+                         clock uncertainty           -0.035    12.758    
+                         FDRE (Setup_fdre_C_D)        0.029    12.787    u_reaction_fsm/wait_target_ms_reg[1]
+  -------------------------------------------------------------------
+                         required time                         12.787    
+                         arrival time                         -12.719    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+Slack (MET) :             0.068ns  (required time - arrival time)
+  Source:                 u_lfsr_random/lfsr_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            u_reaction_fsm/wait_target_ms_reg[2]/D
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        9.780ns  (logic 6.139ns (62.768%)  route 3.641ns (37.232%))
+  Logic Levels:           8  (CARRY4=2 DSP48E1=1 LUT1=1 LUT2=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.678ns = ( 12.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.938ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.800     2.258    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.096     2.354 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.584     2.938    u_lfsr_random/CLK100MHZ_IBUF_BUFG
+                         FDRE                                         r  u_lfsr_random/lfsr_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456     3.394 r  u_lfsr_random/lfsr_reg[12]/Q
+                         net (fo=4, unplaced)         0.800     4.194    u_lfsr_random/lfsr_reg_n_0_[12]
+                         DSP48E1 (Prop_dsp48e1_A[12]_P[15])
+                                                      4.016     8.210 f  u_lfsr_random/scaled_wait/P[15]
+                         net (fo=2, unplaced)         0.800     9.010    u_lfsr_random/p_0_in[2]
+                         LUT1 (Prop_lut1_I0_O)        0.124     9.134 r  u_lfsr_random/wait_ms_carry_i_2/O
+                         net (fo=1, unplaced)         0.000     9.134    u_lfsr_random/wait_ms_carry_i_2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.667 r  u_lfsr_random/wait_ms_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     9.676    u_lfsr_random/wait_ms_carry_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.331    10.007 f  u_lfsr_random/wait_ms_carry__0/O[3]
+                         net (fo=3, unplaced)         0.636    10.643    u_lfsr_random/random_delay_ms[8]
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.950 r  u_lfsr_random/wait_target_ms[12]_i_5/O
+                         net (fo=1, unplaced)         0.449    11.399    u_lfsr_random/wait_target_ms[12]_i_5_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124    11.523 r  u_lfsr_random/wait_target_ms[12]_i_4/O
+                         net (fo=1, unplaced)         0.449    11.972    u_lfsr_random/wait_target_ms[12]_i_4_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.124    12.096 r  u_lfsr_random/wait_target_ms[12]_i_3/O
+                         net (fo=13, unplaced)        0.499    12.595    u_lfsr_random/u_reaction_fsm/clipped_random_delay1__8
+                         LUT6 (Prop_lut6_I4_O)        0.124    12.719 r  u_lfsr_random/wait_target_ms[2]_i_1/O
+                         net (fo=1, unplaced)         0.000    12.719    u_reaction_fsm/D[2]
+                         FDSE                                         r  u_reaction_fsm/wait_target_ms_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    10.000    CLK100MHZ
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, unplaced)         0.760    12.148    CLK100MHZ_IBUF
+                         BUFG (Prop_bufg_I_O)         0.091    12.239 r  CLK100MHZ_IBUF_BUFG_inst/O
+                         net (fo=312, unplaced)       0.439    12.678    u_reaction_fsm/CLK100MHZ_IBUF_BUFG
+                         FDSE                                         r  u_reaction_fsm/wait_target_ms_reg[2]/C
+                         clock pessimism              0.115    12.793    
+                         clock uncertainty           -0.035    12.758    
+                         FDSE (Setup_fdse_C_D)        0.029    12.787    u_reaction_fsm/wait_target_ms_reg[2]
+  -------------------------------------------------------------------
+                         required time                         12.787    
+                         arrival time                         -12.719    
+  -------------------------------------------------------------------
+                         slack                                  0.068    
+
+
+
+

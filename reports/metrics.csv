@@ -1,0 +1,9 @@
+case,instance,lut,ff,dsp,wns_ns,tns_ns,setup_failing_endpoints
+baseline,reaction_top,1486,312,1,0.068,0.0,0
+baseline,u_buzzer_player,45,52,0,,,
+baseline,u_lfsr_random,29,16,1,,,
+baseline,u_score_history,703,41,0,,,
+ai_draft,reaction_top,2089,322,3,-46.225,-1643.442,59
+ai_draft,u_buzzer_player,369,52,0,,,
+ai_draft,u_lfsr_random,409,32,3,,,
+ai_draft,u_score_history,380,41,0,,,

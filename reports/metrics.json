@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "reaction_top": {
+      "lut": 1486,
+      "ff": 312,
+      "dsp": 1,
+      "wns_ns": 0.068,
+      "tns_ns": 0.0,
+      "setup_failing_endpoints": 0
+    },
+    "u_buzzer_player": {
+      "lut": 45,
+      "ff": 52,
+      "dsp": 0
+    },
+    "u_lfsr_random": {
+      "lut": 29,
+      "ff": 16,
+      "dsp": 1
+    },
+    "u_score_history": {
+      "lut": 703,
+      "ff": 41,
+      "dsp": 0
+    }
+  },
+  "ai_draft": {
+    "reaction_top": {
+      "lut": 2089,
+      "ff": 322,
+      "dsp": 3,
+      "wns_ns": -46.225,
+      "tns_ns": -1643.442,
+      "setup_failing_endpoints": 59
+    },
+    "u_buzzer_player": {
+      "lut": 369,
+      "ff": 52,
+      "dsp": 0
+    },
+    "u_lfsr_random": {
+      "lut": 409,
+      "ff": 32,
+      "dsp": 3
+    },
+    "u_score_history": {
+      "lut": 380,
+      "ff": 41,
+      "dsp": 0
+    }
+  }
+}
